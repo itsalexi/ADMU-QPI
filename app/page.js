@@ -88,14 +88,15 @@ export default function Home() {
             const programInfo = await fetchPrograms(selectedProgram);
             setSelectedProgramData(programInfo[0]);
         };
+
         fetchProgram();
         setGradeData({});
     }, [selectedProgram]);
 
-    const handleGradeChange = useCallback((catNo, value) => {
+    const handleGradeChange = useCallback((id, value) => {
         setGradeData((prev) => ({
             ...prev,
-            [catNo]: value,
+            [id]: value,
         }));
     }, []);
 
@@ -108,7 +109,7 @@ export default function Home() {
         selectedProgramData?.years?.forEach((year) => {
             year.semesters.forEach((semester) => {
                 semester.courses.forEach((course) => {
-                    const grade = gradeData[course.catNo];
+                    const grade = gradeData[course.id];
                     if (grade && grade !== 'W') {
                         const qpi = gradeToQPI[grade];
                         const units = parseFloat(course.units);
@@ -165,7 +166,7 @@ export default function Home() {
         selectedProgramData?.years?.forEach((year) => {
             year.semesters.forEach((semester) => {
                 semester.courses.forEach((course) => {
-                    const grade = gradeData[course.catNo];
+                    const grade = gradeData[course.id];
                     if (grade && grade !== 'W') {
                         totalUnits += parseFloat(course.units);
                     }
@@ -183,7 +184,7 @@ export default function Home() {
         selectedProgramData?.years?.forEach((year) => {
             year.semesters.forEach((semester) => {
                 semester.courses.forEach((course) => {
-                    const grade = gradeData[course.catNo];
+                    const grade = gradeData[course.id];
                     if (!grade || grade === 'W') {
                         totalUnits += parseFloat(course.units);
                     }
@@ -228,7 +229,7 @@ export default function Home() {
             const courses =
                 newData.years[yearIndex].semesters[semesterIndex].courses;
             const courseIndex = courses.findIndex(
-                (course) => course.catNo === courseId
+                (course) => course.id === courseId
             );
             if (courseIndex !== -1) {
                 courses.splice(courseIndex, 1);
@@ -249,7 +250,7 @@ export default function Home() {
             const newData = JSON.parse(JSON.stringify(prevData));
             const course = newData.years[yearIndex].semesters[
                 semesterIndex
-            ].courses.find((c) => c.catNo === courseId);
+            ].courses.find((c) => c.id === courseId);
             console.log(
                 newData.years[yearIndex].semesters[semesterIndex].courses
             );
@@ -333,13 +334,13 @@ export default function Home() {
                                                                 (course) => (
                                                                     <div
                                                                         key={
-                                                                            course.catNo
+                                                                            course.id
                                                                         }
                                                                         className="flex items-center space-x-2 p-2 rounded-md bg-gray-50 dark:bg-gray-800"
                                                                     >
                                                                         {editMode[
                                                                             course
-                                                                                .catNo
+                                                                                .id
                                                                         ] ? (
                                                                             <>
                                                                                 <Input
@@ -352,12 +353,12 @@ export default function Home() {
                                                                                         console.log(
                                                                                             yearIndex,
                                                                                             semesterIndex,
-                                                                                            course.catNo
+                                                                                            course.id
                                                                                         );
                                                                                         updateCourse(
                                                                                             yearIndex,
                                                                                             semesterIndex,
-                                                                                            course.catNo,
+                                                                                            course.id,
                                                                                             'catNo',
                                                                                             e
                                                                                                 .target
@@ -376,7 +377,7 @@ export default function Home() {
                                                                                         updateCourse(
                                                                                             yearIndex,
                                                                                             semesterIndex,
-                                                                                            course.catNo,
+                                                                                            course.id,
                                                                                             'courseTitle',
                                                                                             e
                                                                                                 .target
@@ -395,7 +396,7 @@ export default function Home() {
                                                                                         updateCourse(
                                                                                             yearIndex,
                                                                                             semesterIndex,
-                                                                                            course.catNo,
+                                                                                            course.id,
                                                                                             'units',
                                                                                             e
                                                                                                 .target
@@ -412,7 +413,7 @@ export default function Home() {
                                                                             <>
                                                                                 <Label
                                                                                     htmlFor={
-                                                                                        course.catNo
+                                                                                        course.id
                                                                                     }
                                                                                     className="w-1/5 text-sm font-medium"
                                                                                 >
@@ -438,14 +439,14 @@ export default function Home() {
                                                                                 value
                                                                             ) =>
                                                                                 handleGradeChange(
-                                                                                    course.catNo,
+                                                                                    course.id,
                                                                                     value
                                                                                 )
                                                                             }
                                                                             value={
                                                                                 gradeData[
                                                                                     course
-                                                                                        .catNo
+                                                                                        .id
                                                                                 ] ||
                                                                                 undefined
                                                                             }
@@ -454,12 +455,12 @@ export default function Home() {
                                                                                 className={`w-1/5 ${
                                                                                     gradeData[
                                                                                         course
-                                                                                            .catNo
+                                                                                            .id
                                                                                     ]
                                                                                         ? gradeColors[
                                                                                               gradeData[
                                                                                                   course
-                                                                                                      .catNo
+                                                                                                      .id
                                                                                               ]
                                                                                           ]
                                                                                         : ''
@@ -496,7 +497,7 @@ export default function Home() {
                                                                             size="icon"
                                                                             onClick={() =>
                                                                                 toggleEditMode(
-                                                                                    course.catNo
+                                                                                    course.id
                                                                                 )
                                                                             }
                                                                         >
@@ -509,7 +510,7 @@ export default function Home() {
                                                                                 removeCourse(
                                                                                     yearIndex,
                                                                                     semesterIndex,
-                                                                                    course.catNo
+                                                                                    course.id
                                                                                 )
                                                                             }
                                                                         >
