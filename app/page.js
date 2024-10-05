@@ -10,6 +10,16 @@ import {
     SelectTrigger,
     SelectValue,
 } from '@/components/ui/select';
+
+import {
+    Dialog,
+    DialogContent,
+    DialogDescription,
+    DialogHeader,
+    DialogTitle,
+    DialogTrigger,
+} from '@/components/ui/dialog';
+
 import Autocomplete from '@mui/joy/Autocomplete';
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -23,7 +33,7 @@ import {
     GraduationCapIcon,
     EditIcon,
 } from 'lucide-react';
-
+import { Textarea } from '@/components/ui/textarea';
 const gradeToQPI = {
     A: 4.0,
     'B+': 3.5,
@@ -57,6 +67,52 @@ const fetchPrograms = async (id = '') => {
     return data;
 };
 
+const ImportAisis = ({ onImport }) => {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [importedText, setImportedText] = useState('');
+
+    const handleOpenChange = useCallback((open) => {
+        setIsModalOpen(open);
+        if (!open) {
+            setImportedText('');
+        }
+    }, []);
+
+    const handleImport = useCallback(() => {
+        onImport(importedText);
+        setIsModalOpen(false);
+        setImportedText('');
+    }, [importedText, onImport]);
+
+    return (
+        <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
+            <DialogTrigger asChild>
+                <Button variant="outline" className="mt-2 w-full">
+                    Import your grades from AISIS
+                </Button>
+            </DialogTrigger>
+            <DialogContent className="sm:max-w-[425px]">
+                <DialogHeader>
+                    <DialogTitle>Import Grades from AISIS</DialogTitle>
+                    <DialogDescription>
+                        Go to &apos;MY GRADES&apos; / View Advisory Grades on
+                        AISIS, and copy the ENTIRE table.
+                    </DialogDescription>
+                </DialogHeader>
+                <Textarea
+                    value={importedText}
+                    onChange={(e) => setImportedText(e.target.value)}
+                    placeholder="Paste your AISIS grades here..."
+                    className="min-h-[200px]"
+                />
+                <Button onClick={handleImport} className="mt-4 w-full">
+                    Import Grades
+                </Button>
+            </DialogContent>
+        </Dialog>
+    );
+};
+
 export default function Home() {
     const [selectedProgram, setSelectedProgram] = useState(null);
     const [gradeData, setGradeData] = useState({});
@@ -75,7 +131,6 @@ export default function Home() {
                 label: program.program_info,
                 id: program.id,
             }));
-            console.log(options);
             setOptions(options);
             setProgramList(list);
         };
@@ -92,6 +147,113 @@ export default function Home() {
         fetchProgram();
         setGradeData({});
     }, [selectedProgram]);
+
+    const handleImport = (importedText) => {
+        const lines = importedText.trim().split('\n');
+
+        const jsonData = {
+            program_info: '',
+            years: [],
+        };
+
+        const gradesData = {};
+
+        const yearMap = {};
+
+        function generateUUID() {
+            return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(
+                /[xy]/g,
+                function (c) {
+                    const r = (Math.random() * 16) | 0,
+                        v = c === 'x' ? r : (r & 0x3) | 0x8;
+                    return v.toString(16);
+                }
+            );
+        }
+
+        function splitLine(line) {
+            if (line.includes('\t')) {
+                return line.split('\t');
+            } else {
+                return line.split(/\s{4}/);
+            }
+        }
+
+        const baseYear = parseInt(splitLine(lines[0])[0].split('-')[0], 10);
+
+        function getYearName(yearString) {
+            const currentYear = parseInt(yearString.split('-')[0], 10);
+            const yearDifference = currentYear - baseYear;
+            const years = ['First', 'Second', 'Third', 'Fourth', 'Fifth'];
+            return years[yearDifference] || 'Unknown';
+        }
+
+        lines.forEach((line) => {
+            const [
+                year,
+                semester,
+                programCode,
+                courseCode,
+                courseTitle,
+                units,
+                grade,
+            ] = splitLine(line);
+
+            if (!jsonData.program_info) {
+                jsonData.program_info = programCode;
+            }
+
+            const courseId = generateUUID();
+
+            gradesData[courseId] = grade === 'S' ? 'A' : grade;
+
+            const yearName = getYearName(year);
+
+            if (!yearMap[yearName]) {
+                yearMap[yearName] = {
+                    year: yearName,
+                    semesters: {},
+                };
+            }
+
+            let semesterName;
+            if (semester === '1') {
+                semesterName = 'First Semester';
+            } else if (semester === '2') {
+                semesterName = 'Second Semester';
+            } else if (semester === '0') {
+                semesterName = 'Intersession';
+            }
+
+            if (!yearMap[yearName].semesters[semesterName]) {
+                yearMap[yearName].semesters[semesterName] = { courses: [] };
+            }
+
+            yearMap[yearName].semesters[semesterName].courses.push({
+                id: courseId,
+                catNo: courseCode,
+                courseTitle: courseTitle,
+                units: units,
+            });
+        });
+
+        jsonData.years = Object.values(yearMap).map((yearData) => {
+            return {
+                year: yearData.year,
+                semesters: Object.keys(yearData.semesters).map(
+                    (semesterName) => {
+                        return {
+                            name: semesterName,
+                            courses: yearData.semesters[semesterName].courses,
+                        };
+                    }
+                ),
+            };
+        });
+
+        setSelectedProgramData(jsonData);
+        setGradeData(gradesData);
+    };
 
     const handleGradeChange = useCallback((id, value) => {
         setGradeData((prev) => ({
@@ -251,10 +413,7 @@ export default function Home() {
             const course = newData.years[yearIndex].semesters[
                 semesterIndex
             ].courses.find((c) => c.id === courseId);
-            console.log(
-                newData.years[yearIndex].semesters[semesterIndex].courses
-            );
-            console.log(course);
+
             if (course) {
                 course[field] = value;
             }
@@ -277,9 +436,6 @@ export default function Home() {
                         ) || null
                     }
                     getOptionLabel={(option) => option.label}
-                    getOptionKey={(option) => {
-                        console.log(option.id);
-                    }}
                 />
             </div>
 
@@ -350,11 +506,6 @@ export default function Home() {
                                                                                     onChange={(
                                                                                         e
                                                                                     ) => {
-                                                                                        console.log(
-                                                                                            yearIndex,
-                                                                                            semesterIndex,
-                                                                                            course.id
-                                                                                        );
                                                                                         updateCourse(
                                                                                             yearIndex,
                                                                                             semesterIndex,
@@ -568,6 +719,7 @@ export default function Home() {
                                 </div>
                             </CardContent>
                         </Card>
+                        <ImportAisis onImport={handleImport} />
 
                         <Card>
                             <CardHeader>
@@ -644,9 +796,11 @@ export default function Home() {
             )}
 
             {!selectedProgramData && (
-                <div className="text-center text-gray-500 dark:text-gray-400">
+                <div className="text-gray-500 dark:text-gray-400 text-center">
                     <BookOpenIcon className="mx-auto h-12 w-12 mb-2" />
                     <p>Select a program to begin calculating your QPI.</p>
+                    <p className="mt-2">or</p>
+                    <ImportAisis onImport={handleImport} />
                 </div>
             )}
         </div>
