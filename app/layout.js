@@ -17,7 +17,7 @@ const geistMono = localFont({
 export const metadata = {
     title: 'Ateneo QPI Calculator',
     description:
-        'Select your program from a list of courses and calculate your QPI!',
+        'An easy way to calculate your cumulative QPI in Ateneo. Select your program from a list of courses and calculate your QPI using the ADMU QPI Calculator!',
 };
 
 export default function RootLayout({ children }) {
