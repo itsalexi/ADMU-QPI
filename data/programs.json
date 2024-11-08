@@ -21375,6 +21375,640 @@
         ]
       }
     ],
+    "BS CS_2020_1": [
+      {
+        "program_info": "(BS CS) BACHELOR OF SCIENCE IN COMPUTER SCIENCE (Ver Sem 1, Ver Year 2020)",
+        "years": [
+          {
+            "year": "First",
+            "semesters": [
+              {
+                "name": "First Semester",
+                "courses": [
+                  {
+                    "id": "5dc3dc35-8d32-479a-b46b-e3d1bea1d8bf",
+                    "catNo": "CSCI 20",
+                    "courseTitle": "INTRODUCTION TO COMPUTING",
+                    "units": "3",
+                    "prerequisites": "",
+                    "category": "M"
+                  },
+                  {
+                    "id": "bdce0082-05fa-4195-aa1d-91546b7fd2e1",
+                    "catNo": "CSCI 21",
+                    "courseTitle": "INTRODUCTION TO PROGRAMMING I",
+                    "units": "3",
+                    "prerequisites": "",
+                    "category": "M"
+                  },
+                  {
+                    "id": "bd063562-8937-48dc-a992-90b700d43e6e",
+                    "catNo": "ENGL 11",
+                    "courseTitle": "PURPOSIVE COMMUNICATION",
+                    "units": "3",
+                    "prerequisites": "",
+                    "category": "C"
+                  },
+                  {
+                    "id": "c18516d3-80c1-45b9-8b3b-f632b5fe6cbe",
+                    "catNo": "FILI 12",
+                    "courseTitle": "PANITIKAN NG PILIPINAS",
+                    "units": "3",
+                    "prerequisites": "",
+                    "category": "C"
+                  },
+                  {
+                    "id": "7fd72c81-c998-4afe-9d6c-94ef5e57b712",
+                    "catNo": "INTACT 11",
+                    "courseTitle": "INTRODUCTION TO ATENEO CULTURE AND TRADITIONS 11",
+                    "units": "0",
+                    "prerequisites": "",
+                    "category": "C"
+                  },
+                  {
+                    "id": "dd248027-30e8-4f1d-8ab4-d115feb53d35",
+                    "catNo": "MATH 10",
+                    "courseTitle": "MATHEMATICS IN THE MODERN WORLD",
+                    "units": "3",
+                    "prerequisites": "",
+                    "category": "C"
+                  },
+                  {
+                    "id": "5b7afbfe-7653-4488-b6d0-5618a931cb1e",
+                    "catNo": "MATH 21",
+                    "courseTitle": "UNIVERSITY PRECALCULUS",
+                    "units": "3",
+                    "prerequisites": "",
+                    "category": "M"
+                  },
+                  {
+                    "id": "227851aa-4377-4554-9c79-88d04e104748",
+                    "catNo": "PHYED 1",
+                    "courseTitle": "PHYSICAL EDUCATION 1",
+                    "units": "2",
+                    "prerequisites": "",
+                    "category": "PE1"
+                  }
+                ]
+              },
+              {
+                "name": "Second Semester",
+                "courses": [
+                  {
+                    "id": "03c0fe56-cf7e-4c42-a75e-9dcd09d64893",
+                    "catNo": "CSCI 22",
+                    "courseTitle": "INTRODUCTION TO PROGRAMMING II",
+                    "units": "3",
+                    "prerequisites": "CSCI 20, CSCI 21",
+                    "category": "M"
+                  },
+                  {
+                    "id": "8d82a58d-316e-4769-baf5-feadff86489c",
+                    "catNo": "ENLIT 12",
+                    "courseTitle": "LITERATURE: GLOBAL VOICES AND ENCOUNTERS",
+                    "units": "3",
+                    "prerequisites": "",
+                    "category": "C"
+                  },
+                  {
+                    "id": "47a892c4-42e0-41d7-990f-f06d56ecac1c",
+                    "catNo": "FILI 11",
+                    "courseTitle": "MALAYUNING KOMUNIKASYON",
+                    "units": "3",
+                    "prerequisites": "",
+                    "category": "C"
+                  },
+                  {
+                    "id": "e7ceb0a9-0c65-4a7b-9b89-1014ee01b6e8",
+                    "catNo": "HISTO 11",
+                    "courseTitle": "RIZAL AND THE EMERGENCE OF THE PHILIPPINE NATION",
+                    "units": "3",
+                    "prerequisites": "",
+                    "category": "C"
+                  },
+                  {
+                    "id": "cf005bf1-c94d-41c2-bef4-4526e5c6a057",
+                    "catNo": "INTACT 12",
+                    "courseTitle": "INTRODUCTION TO ATENEO CULTURE AND TRADITIONS 12",
+                    "units": "0",
+                    "prerequisites": "",
+                    "category": "C"
+                  },
+                  {
+                    "id": "b791dc99-0380-49ac-b419-5dc1b9991e12",
+                    "catNo": "MATH 30.23",
+                    "courseTitle": "APPLIED CALCULUS FOR SCIENCE AND ENGINEERING I",
+                    "units": "3",
+                    "prerequisites": "MATH 21",
+                    "category": "M"
+                  },
+                  {
+                    "id": "85a5b6ff-d727-4749-af8b-031ea401d2e7",
+                    "catNo": "PHYED 2",
+                    "courseTitle": "PHYSICAL EDUCATION 2",
+                    "units": "2",
+                    "prerequisites": "",
+                    "category": "PE2"
+                  },
+                  {
+                    "id": "ea212e6a-9c2c-472e-b767-fbf20e38b4b3",
+                    "catNo": "SocSc 11",
+                    "courseTitle": "UNDERSTANDING THE SELF",
+                    "units": "3",
+                    "prerequisites": "",
+                    "category": "C"
+                  },
+                  {
+                    "id": "f45103b5-8ce4-4de7-8ace-f5230cb6ea26",
+                    "catNo": "THEO 11",
+                    "courseTitle": "FAITH, SPIRITUALITY, AND THE CHURCH",
+                    "units": "3",
+                    "prerequisites": "",
+                    "category": "C"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "year": "Second",
+            "semesters": [
+              {
+                "name": "Intersession",
+                "courses": [
+                  {
+                    "id": "59db8538-f9e7-453d-bd46-70b1cfc583a7",
+                    "catNo": "MATH 60.2",
+                    "courseTitle": "INTRODUCTION TO STATISTICAL ANALYSIS",
+                    "units": "3",
+                    "prerequisites": "MATH 30.23",
+                    "category": "M"
+                  },
+                  {
+                    "id": "83c1ed92-79f1-4688-b753-49f9ad7f4a69",
+                    "catNo": "MATH NSCI TECH ELECTIVE",
+                    "courseTitle": "MATH, NATSCI, AND TECHNOLOGY ELECTIVE",
+                    "units": "3",
+                    "prerequisites": "",
+                    "category": "RM1"
+                  },
+                  {
+                    "id": "ac346e01-0f7d-4892-9bed-b9a2cd49ba36",
+                    "catNo": "SocSc 12",
+                    "courseTitle": "THE CONTEMPORARY WORLD",
+                    "units": "3",
+                    "prerequisites": "SocSc 11",
+                    "category": "C"
+                  }
+                ]
+              },
+              {
+                "name": "First Semester",
+                "courses": [
+                  {
+                    "id": "e1b828fa-59ec-4ce9-b037-917c90723cdf",
+                    "catNo": "ArtAp 10",
+                    "courseTitle": "ART APPRECIATION",
+                    "units": "3",
+                    "prerequisites": "",
+                    "category": "C"
+                  },
+                  {
+                    "id": "cedff89d-130e-4fce-89dd-b39af492e32b",
+                    "catNo": "CSCI 30",
+                    "courseTitle": "DATA STRUCTURES AND ALGORITHMS",
+                    "units": "3",
+                    "prerequisites": "CSCI 22",
+                    "category": "M"
+                  },
+                  {
+                    "id": "018cb50f-01e8-4eef-8055-0ddbc0b28544",
+                    "catNo": "MATH 30.24",
+                    "courseTitle": "APPLIED CALCULUS FOR SCIENCE AND ENGINEERING II",
+                    "units": "3",
+                    "prerequisites": "MATH 30.23",
+                    "category": "M"
+                  },
+                  {
+                    "id": "e252b2d5-db73-43ed-9125-7e31f1eeeb36",
+                    "catNo": "MATH 51.3",
+                    "courseTitle": "MATH FOR COMPUTER SCIENCE I",
+                    "units": "3",
+                    "prerequisites": "",
+                    "category": "M"
+                  },
+                  {
+                    "id": "0f2a473f-a7b5-4c56-9a15-101a34f15843",
+                    "catNo": "PHILO 11",
+                    "courseTitle": "PHILOSOPHY: THE HUMAN CONDITION",
+                    "units": "3",
+                    "prerequisites": "",
+                    "category": "CPH1"
+                  },
+                  {
+                    "id": "dde44cb3-fc4f-4e82-8e7e-184f515d2ec0",
+                    "catNo": "PHYED 3",
+                    "courseTitle": "PHYSICAL EDUCATION 3",
+                    "units": "2",
+                    "prerequisites": "",
+                    "category": "PE3"
+                  },
+                  {
+                    "id": "32a2666d-9a9e-4e42-9851-d7ff43e9aebd",
+                    "catNo": "PHYS 23.11",
+                    "courseTitle": "UNIVERSITY PHYSICS FOR COMPUTER SCIENCE I, LECTURE",
+                    "units": "3",
+                    "prerequisites": "MATH 30.23",
+                    "category": "M"
+                  },
+                  {
+                    "id": "8cab59bb-5037-4917-bdb2-ef611da99180",
+                    "catNo": "PHYS 23.12",
+                    "courseTitle": "UNIVERSITY PHYSICS FOR COMPUTER SCIENCE I, LABORATORY",
+                    "units": "2",
+                    "prerequisites": "",
+                    "category": "M"
+                  }
+                ]
+              },
+              {
+                "name": "Second Semester",
+                "courses": [
+                  {
+                    "id": "e7dc7716-1184-4fc9-a03f-73cfade6969d",
+                    "catNo": "CSCI 40",
+                    "courseTitle": "SOFTWARE TOOLS AND DEVELOPMENT FRAMEWORKS",
+                    "units": "3",
+                    "prerequisites": "CSCI 22",
+                    "category": "M"
+                  },
+                  {
+                    "id": "497aae95-e8e7-43e6-9ce9-c33f0a7e4aac",
+                    "catNo": "FLC 11",
+                    "courseTitle": "FOREIGN LANGUAGE AND CULTURE 11",
+                    "units": "3",
+                    "prerequisites": "",
+                    "category": "FLC1"
+                  },
+                  {
+                    "id": "810b6a94-87cc-42c6-9899-a84e03c292fd",
+                    "catNo": "HISTO 12",
+                    "courseTitle": "READINGS IN PHILIPPINE HISTORY",
+                    "units": "3",
+                    "prerequisites": "HISTO 11",
+                    "category": "C"
+                  },
+                  {
+                    "id": "2b752fbf-dce4-4208-8a6e-c2db1e758961",
+                    "catNo": "MATH 51.4",
+                    "courseTitle": "MATH FOR COMPUTER SCIENCE II",
+                    "units": "3",
+                    "prerequisites": "MATH 51.3",
+                    "category": "M"
+                  },
+                  {
+                    "id": "c9acc17e-5aa4-4b5b-8f52-9124d3aa9ca6",
+                    "catNo": "NSTP 11",
+                    "courseTitle": "NATIONAL SERVICE TRAINING PROGRAM 11",
+                    "units": "3",
+                    "prerequisites": "",
+                    "category": "NP1"
+                  },
+                  {
+                    "id": "d3cead80-ef2b-4792-930a-dac3a4ce4eac",
+                    "catNo": "PHYED 4",
+                    "courseTitle": "PHYSICAL EDUCATION 4",
+                    "units": "2",
+                    "prerequisites": "",
+                    "category": "PE4"
+                  },
+                  {
+                    "id": "7d2eb5aa-0a6b-448e-8e39-0eff2c39ca43",
+                    "catNo": "PHYS 160",
+                    "courseTitle": "ELECTRONICS",
+                    "units": "5",
+                    "prerequisites": "PHYS 23.11, PHYS 23.12",
+                    "category": "M"
+                  },
+                  {
+                    "id": "144b3796-7b10-4962-8886-d7519bec7241",
+                    "catNo": "THEO 12",
+                    "courseTitle": "THEOLOGY OF THE CATHOLIC SOCIAL VISION",
+                    "units": "3",
+                    "prerequisites": "THEO 11",
+                    "category": "C"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "year": "Third",
+            "semesters": [
+              {
+                "name": "Intersession",
+                "courses": [
+                  {
+                    "id": "4187789c-77d7-4352-b25b-3542353db2db",
+                    "catNo": "IE 1",
+                    "courseTitle": "INTERDISCIPLINARY ELECTIVE 1 - ENGLISH",
+                    "units": "3",
+                    "prerequisites": "ENGL 11, ENLIT 12",
+                    "category": "IE1E"
+                  },
+                  {
+                    "id": "618808da-9b35-44f8-b4c3-6d0d74284d32",
+                    "catNo": "IE 2",
+                    "courseTitle": "INTERDISCIPLINARY ELECTIVE 2",
+                    "units": "3",
+                    "prerequisites": "",
+                    "category": "IE2"
+                  }
+                ]
+              },
+              {
+                "name": "First Semester",
+                "courses": [
+                  {
+                    "id": "2b2086c1-5088-43fa-9500-865843ab0a90",
+                    "catNo": "CSCI 41",
+                    "courseTitle": "INFORMATION MANAGEMENT",
+                    "units": "3",
+                    "prerequisites": "CSCI 40",
+                    "category": "M"
+                  },
+                  {
+                    "id": "523ea253-6239-4252-b461-03a88900c8af",
+                    "catNo": "CSCI 50.01",
+                    "courseTitle": "COMPUTER ORGANIZATION, LECTURE",
+                    "units": "3",
+                    "prerequisites": "CSCI 20",
+                    "category": "M"
+                  },
+                  {
+                    "id": "cd206b71-4774-4db6-9a1f-1934f33f816e",
+                    "catNo": "CSCI 50.02",
+                    "courseTitle": "COMPUTER ORGANIZATION, LABORATORY",
+                    "units": "3",
+                    "prerequisites": "CSCI 20",
+                    "category": "M"
+                  },
+                  {
+                    "id": "ec8df904-dcec-4b16-ad13-c709194e2a2d",
+                    "catNo": "CSCI MAJOR ELECTIVE",
+                    "courseTitle": "CSCI MAJOR ELECTIVE",
+                    "units": "3",
+                    "prerequisites": "",
+                    "category": "ME1"
+                  },
+                  {
+                    "id": "04aba6a0-6e4f-4e6c-8b52-aa9cc7f10244",
+                    "catNo": "ISCS 30.XX",
+                    "courseTitle": "GUIDED STUDIES IN DISCS",
+                    "units": "1",
+                    "prerequisites": "CSCI 20",
+                    "category": "RM2"
+                  },
+                  {
+                    "id": "1768ecdf-df5e-4ac2-9d42-c28cb44edaa8",
+                    "catNo": "PHILO 12",
+                    "courseTitle": "PHILOSOPHY OF RELIGION",
+                    "units": "3",
+                    "prerequisites": "PHILO 11",
+                    "category": "C"
+                  },
+                  {
+                    "id": "1653100d-2cf8-46bb-b87c-c71b7fb55d36",
+                    "catNo": "THEO 13",
+                    "courseTitle": "A THEOLOGY OF MARRIAGE, FAMILY, AND VOCATION",
+                    "units": "3",
+                    "prerequisites": "THEO 12",
+                    "category": "C"
+                  }
+                ]
+              },
+              {
+                "name": "Second Semester",
+                "courses": [
+                  {
+                    "id": "546c82a7-d437-4b99-92a1-47734602e19d",
+                    "catNo": "CSCI 199.1",
+                    "courseTitle": "THESIS WRITING I",
+                    "units": "1",
+                    "prerequisites": "CSCI 20",
+                    "category": "M"
+                  },
+                  {
+                    "id": "d3b8b767-d234-41a5-842b-522fc8e3a769",
+                    "catNo": "CSCI 42",
+                    "courseTitle": "INTRODUCTION TO SOFTWARE ENGINEERING",
+                    "units": "3",
+                    "prerequisites": "CSCI 41",
+                    "category": "M"
+                  },
+                  {
+                    "id": "fcdd0d0a-3f12-4afa-982c-dc99d8cf494c",
+                    "catNo": "CSCI 51.01",
+                    "courseTitle": "OPERATING SYSTEMS, LECTURE",
+                    "units": "3",
+                    "prerequisites": "CSCI 20",
+                    "category": "M"
+                  },
+                  {
+                    "id": "bd1863a2-167d-418d-aa73-a02cb239718d",
+                    "catNo": "CSCI 51.02",
+                    "courseTitle": "OPERATING SYSTEMS, LABORATORY",
+                    "units": "3",
+                    "prerequisites": "CSCI 20",
+                    "category": "M"
+                  },
+                  {
+                    "id": "7b0ec881-9985-4b45-a909-206d6f3b1aa8",
+                    "catNo": "CSCI MAJOR ELECTIVE",
+                    "courseTitle": "CSCI MAJOR ELECTIVE",
+                    "units": "3",
+                    "prerequisites": "",
+                    "category": "ME2"
+                  },
+                  {
+                    "id": "0e01775a-6578-40c7-8092-88e5ea8b2ff2",
+                    "catNo": "ISCS 30.XX",
+                    "courseTitle": "GUIDED STUDIES IN DISCS",
+                    "units": "1",
+                    "prerequisites": "CSCI 20",
+                    "category": "RM3"
+                  },
+                  {
+                    "id": "8b18f5d9-4bf2-4716-bc67-dcf4345a4a07",
+                    "catNo": "NSTP 12",
+                    "courseTitle": "NATIONAL SERVICE TRAINING PROGRAM 12",
+                    "units": "3",
+                    "prerequisites": "",
+                    "category": "NP2"
+                  },
+                  {
+                    "id": "7f5e3705-e06f-4c92-a917-24d54d77c7f4",
+                    "catNo": "PHILO 13",
+                    "courseTitle": "ETHICS",
+                    "units": "3",
+                    "prerequisites": "PHILO 11",
+                    "category": "C"
+                  },
+                  {
+                    "id": "f70e12bc-6fc4-49cd-ba57-ca39c9341699",
+                    "catNo": "SocSc 13",
+                    "courseTitle": "THE ECONOMY, SOCIETY, AND SUSTAINABLE DEVELOPMENT",
+                    "units": "3",
+                    "prerequisites": "SocSc 12",
+                    "category": "C"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "year": "Fourth",
+            "semesters": [
+              {
+                "name": "Intersession",
+                "courses": [
+                  {
+                    "id": "253f08d5-bcfd-4b4e-9dc5-2cfb66163b15",
+                    "catNo": "CSCI 197",
+                    "courseTitle": "PRACTICUM",
+                    "units": "3",
+                    "prerequisites": "",
+                    "category": "M"
+                  }
+                ]
+              },
+              {
+                "name": "First Semester",
+                "courses": [
+                  {
+                    "id": "d9661c32-0e8a-4cea-be66-26f8d736ce67",
+                    "catNo": "CSCI 199.2",
+                    "courseTitle": "THESIS WRITING II",
+                    "units": "3",
+                    "prerequisites": "CSCI 199.1",
+                    "category": "M"
+                  },
+                  {
+                    "id": "46f7d895-f40a-4803-b24e-9ff625dd81da",
+                    "catNo": "CSCI 60",
+                    "courseTitle": "COMPUTER NETWORKS AND DATA COMMUNICATIONS",
+                    "units": "3",
+                    "prerequisites": "CSCI 20",
+                    "category": "M"
+                  },
+                  {
+                    "id": "f6f95929-14e8-4eb2-b04f-b3aba9114d4e",
+                    "catNo": "CSCI 70",
+                    "courseTitle": "STRUCTURE AND INTERPRETATION OF PROGRAMMING LANGUAGES",
+                    "units": "3",
+                    "prerequisites": "CSCI 30",
+                    "category": "M"
+                  },
+                  {
+                    "id": "4949f18c-e4ab-4921-b0f3-3263ab557212",
+                    "catNo": "CSCI MAJOR ELECTIVE",
+                    "courseTitle": "CSCI MAJOR ELECTIVE",
+                    "units": "3",
+                    "prerequisites": "",
+                    "category": "ME3"
+                  },
+                  {
+                    "id": "1e12e6eb-fba4-46e3-a6ab-a7f2f7beb3d5",
+                    "catNo": "IE 3",
+                    "courseTitle": "INTERDISCIPLINARY ELECTIVE 3",
+                    "units": "3",
+                    "prerequisites": "",
+                    "category": "IE3"
+                  },
+                  {
+                    "id": "72d90b79-5183-409b-9eae-886ec281c2e2",
+                    "catNo": "ISCS 30.XX",
+                    "courseTitle": "GUIDED STUDIES IN DISCS",
+                    "units": "1",
+                    "prerequisites": "CSCI 20",
+                    "category": "RM4"
+                  },
+                  {
+                    "id": "7466da95-ead5-4c10-a7bd-0ed45a806659",
+                    "catNo": "SocSc 14",
+                    "courseTitle": "POLITICS, GOVERNANCE, AND CITIZENSHIP",
+                    "units": "3",
+                    "prerequisites": "SocSc 13",
+                    "category": "C"
+                  }
+                ]
+              },
+              {
+                "name": "Second Semester",
+                "courses": [
+                  {
+                    "id": "c718c804-10b5-47d9-b534-9f1c06a7a689",
+                    "catNo": "CSCI 199.3",
+                    "courseTitle": "THESIS WRITING III",
+                    "units": "3",
+                    "prerequisites": "CSCI 199.2",
+                    "category": "M"
+                  },
+                  {
+                    "id": "1edadada-6388-433a-a2a9-26ae10f50e70",
+                    "catNo": "CSCI 61",
+                    "courseTitle": "INFORMATION ASSURANCE AND SECURITY",
+                    "units": "3",
+                    "prerequisites": "CSCI 41, CSCI 60",
+                    "category": "M"
+                  },
+                  {
+                    "id": "3b3a865a-e893-4ca2-9b47-55be7f6d4684",
+                    "catNo": "CSCI 71",
+                    "courseTitle": "THEORY OF COMPUTATION",
+                    "units": "3",
+                    "prerequisites": "CSCI 30",
+                    "category": "M"
+                  },
+                  {
+                    "id": "3b0c7d6a-a675-4577-af30-769391d1d5a6",
+                    "catNo": "DLQ 10",
+                    "courseTitle": "DISCERNING LIFE QUESTIONS: TOWARDS LEADERSHIP AND COMMITMENT",
+                    "units": "3",
+                    "prerequisites": "PHILO 13, SocSc 13, THEO 13",
+                    "category": "C"
+                  },
+                  {
+                    "id": "0b715db8-4f7a-430a-b554-df8fed140062",
+                    "catNo": "FREE ELECTIVE",
+                    "courseTitle": "FREE ELECTIVE",
+                    "units": "3",
+                    "prerequisites": "",
+                    "category": "FE1"
+                  },
+                  {
+                    "id": "6c7e5cc1-bef2-4e64-9dd9-7f332ea8b783",
+                    "catNo": "ISCS 30.XX",
+                    "courseTitle": "GUIDED STUDIES IN DISCS",
+                    "units": "1",
+                    "prerequisites": "CSCI 20",
+                    "category": "RM5"
+                  },
+                  {
+                    "id": "ee5ddabd-9d58-4c02-95ac-74bc7ebae9a6",
+                    "catNo": "STS 10",
+                    "courseTitle": "SCIENCE, TECHNOLOGY, AND SOCIETY",
+                    "units": "3",
+                    "prerequisites": "",
+                    "category": "C"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
     "BS CS_2024_1": [
       {
         "program_info": "(BS CS) BACHELOR OF SCIENCE IN COMPUTER SCIENCE\n    (Ver Sem 1, Ver Year 2024)",
