@@ -420,6 +420,13 @@ export default function Home() {
             return newData;
         });
     };
+
+    const startScratch = () => {
+        setSelectedProgramData({program_info: "Blank Course", years: [          {
+            "year": "First", "semesters": [              {
+                "name": "Blank Semester", "courses": []}]}]});
+    }
+
     return (
         <div className="container mx-auto p-4 max-w-6xl">
             <div className="mb-6">
@@ -798,11 +805,14 @@ export default function Home() {
             {!selectedProgramData && (
                 <div className="text-gray-500 dark:text-gray-400 text-center">
                     <BookOpenIcon className="mx-auto h-12 w-12 mb-2" />
-                    <p>Select a program to begin calculating your QPI.</p>
+                    <p>Select a program to begin calculating your QPI. Course not on the list?<br></br>                    <Button variant="outline" className="mt-2 w-full" onClick={() => startScratch()}>Start from scratch</Button>
+                    </p>
                     <p className="mt-2">or</p>
                     <ImportAisis onImport={handleImport} />
                 </div>
             )}
+
+
         </div>
     );
 }
